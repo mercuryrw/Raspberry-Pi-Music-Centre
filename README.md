@@ -52,7 +52,7 @@ It is designed to be set up on Raspian Stretch, but will probably work on any ot
 
 21.)	Enter “sudo nano /etc/asound.conf”
 
-22.)	Make the file the same as the “asound.conf” file in the tutorial folder
+22.)	Make the file the same as the “asound.conf” file in the "Configs" folder
 
 23.)	Save the file using “CTRL + O” then “Enter”
 
@@ -64,7 +64,7 @@ It is designed to be set up on Raspian Stretch, but will probably work on any ot
 
 26.)	Enter “sudo nano /etc/mpd.conf”
 
-27.)	Make the file the same as the “mpd.conf” file in the tutorial folder
+27.)	Make the file the same as the “mpd.conf” file in the "Configs" folder
 
 28.)	Save the file using “CTRL + O” then “Enter”
 
@@ -84,13 +84,13 @@ It is designed to be set up on Raspian Stretch, but will probably work on any ot
 
 34.)	Enter “sudo nano /etc/nginx/nginx.conf” 
 
-35.)	Make the file the same as the “nginx.conf” file in the tutorial folder
+35.)	Make the file the same as the “nginx.conf” file in the "Configs" folder
 
 36.)	Save the file using “CTRL + O” then “Enter”
 
 37.)	Enter “sudo nano /etc/nginx/sites-available/default” 
 
-38.)	Make the file the same as the “default” file in the tutorial folder
+38.)	Make the file the same as the “default” file in the "Configs" folder
 
 39.)	Save the file using “CTRL + O” then “Enter”
 
@@ -98,7 +98,7 @@ It is designed to be set up on Raspian Stretch, but will probably work on any ot
 
 41.)	Enter “cd /var/www/html”
 
-42.)	Make the folder the same as the “html” folder in the tutorial folder
+42.)	Make the folder the same as the “html” folder in the "Configs" folder
 
 43.)	Enter “sudo chmod +x *.sh” to give all scripts in the folder permission to execute
 
@@ -108,7 +108,7 @@ It is designed to be set up on Raspian Stretch, but will probably work on any ot
 
 45.)	Enter “sudo nano /etc/php/7.0/fpm/pool.d/www.conf”
 
-46.)	Make the file the same as the “www.conf” file in the tutorial folder
+46.)	Make the file the same as the “www.conf” file in the "Configs" folder
 
 47.)	Save the file using “CTRL + O” then “Enter”
 
