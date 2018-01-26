@@ -1,10 +1,10 @@
 # Raspberry-Pi-Music-Centre
 Raspberry Pi Home Music Server Tutorial
 
-This is a tutorial for anyone who is a complete Linux beginner and wishes to make a headless (no monitor/mouse/keyboard) music player using a Raspberry Pi 3 and an i2c DAC (in this case, I used an iquadio dac+)
-It is designed to be set up on Raspian Jesse, but will probably work on any other linux distro, given enough tinkering.
+This is a tutorial for anyone who is a complete Linux beginner and wishes to make a headless (no monitor/mouse/keyboard) music player using a Raspberry Pi 3 and an i2c DAC (in this case, I used an iquadio dac+).
+It is designed to be set up on Raspian Stretch, but will probably work on any other Linux distro, given enough tinkering.
 
-1.)	Connect to Raspberry Pi to the wifi using the icon in the bottom right, choosing our wifi and entering the password.
+1.)	Connect to Raspberry Pi to the Wi-Fi using the icon in the bottom right, choosing our Wi-Fi and entering the password.
 
 2.)	Open the terminal 
 
