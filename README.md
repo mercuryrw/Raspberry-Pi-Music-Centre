@@ -109,9 +109,9 @@ If you do mess up somewhere along the line, formatting and reinstalling Raspian 
 
 44.)	Enter “sudo apt install php7.0-fpm” to install the Fastpass CGI php server for running the poweroff and reboot scripts from the web server
 
-45.)	Enter “sudo nano /etc/php/7.0/fpm/pool.d/www.conf”
+45.)	Enter “sudo nano /etc/php/7.0/fpm/pool.d/ww<i></i>w.conf”
 
-46.)	Make the file the same as the “www.conf” file in the "Configs" folder
+46.)	Make the file the same as the “ww<i></i>w.conf” file in the "Configs" folder
 
 47.)	Save the file using “CTRL + O” then “Enter”
 
