@@ -7,148 +7,148 @@ It is designed to be set up on Raspian Stretch, but will probably work on any ot
 Disclaimer: I take no responsibility for any damage you may do to your equipment following this tutorial.
 If you do mess up somewhere along the line, formatting and reinstalling Raspian Stretch on the SD again should bring your pi back to its original state.
 
-1.)	Connect to Raspberry Pi to the Wi-Fi using the icon in the bottom right, choosing our Wi-Fi and entering the password.
+1)	Connect to Raspberry Pi to the Wi-Fi using the icon in the bottom right, choosing our Wi-Fi and entering the password.
 
-2.)	Open the terminal 
+2)	Open the terminal.
 
-3.)	Enter “sudo raspi-config”
+3)	Enter “sudo raspi-config”.
 
-4.)	Go into “1 - Change User Password” and set it to “raspberrpi” or any password you choose
+4)	Go into “1 - Change User Password” and set it to “raspberrpi” or any password you choose.
 
-5.)	Go into “5 – Interfacing options > SSH” and set it to “enabled”
+5)	Go into “5 – Interfacing options > SSH” and set it to “enabled”.
 
-6.)	Go into “5 – Interfacing options > VNC” and set it to “enabled”
+6)	Go into “5 – Interfacing options > VNC” and set it to “enabled”.
 
-7.)	Go into “7 – Advanced options > Expand Filesystem” and run it
+7)	Go into “7 – Advanced options > Expand Filesystem” and run it.
 
-8.)	Go into “7 – Advanced options > Overscan” and “disable” it
+8)	Go into “7 – Advanced options > Overscan” and “disable” it.
 
-9.)	Go into “7 – Advanced options > Resolution” and set it to “CEA Mode 4 1280x720 60Hz 16:9”
+9)	Go into “7 – Advanced options > Resolution” and set it to “CEA Mode 4 1280x720 60Hz 16:9”.
 
-10.)	Select “Finish” then “Yes” to reboot
+10)	Select “Finish” then “Yes” to reboot.
 
 
 
-11.)	Open the terminal
+11)	Open the terminal.
 
-12.)	Enter “sudo apt update” to update the repository lists
+12)	Enter “sudo apt update” to update the repository lists.
 
-13.)	Enter “sudo apt upgrade” to install any new updates
+13)	Enter “sudo apt upgrade” to install any new updates.
 
-14.)	Enter “sudo reboot” to reboot the system
+14)	Enter “sudo reboot” to reboot the system.
 
 
 
-15.)	Open the terminal
+15)	Open the terminal.
 
-16.)	Enter “sudo nano /boot/config.txt”
+16)	Enter “sudo nano /boot/config.txt”.
 
-17.)	Add the line “dtoverlay=iqaudio-dacplus” to enable the dac
+17)	Add the line “dtoverlay=iqaudio-dacplus” to enable the dac. Your dac may require a different overlay (usually found on the manufacturers website).
 
-18.)	Enter “sudo reboot” to reboot the system
+18)	Enter “sudo reboot” to reboot the system.
 
 
 
-19.)	Open the terminal
+19)	Open the terminal.
 
-20.)	Enter “sudo apt install libasound2-plugin-equal” to install the equaliser plugin
+20)	Enter “sudo apt install libasound2-plugin-equal” to install the equaliser plugin.
 
-21.)	Enter “sudo nano /etc/asound.conf”
+21)	Enter “sudo nano /etc/asound.conf”.
 
-22.)	Make the file the same as the “asound.conf” file in the "Configs" folder
+22)	Make the file the same as the “asound.conf” file in the "Configs" folder.
 
-23.)	Save the file using “CTRL + O” then “Enter”
+23)	Save the file using “CTRL + O” then “Enter”.
 
 
 
-24.)	Enter “sudo apt install mpd” to install mpd, the music server program
+24)	Enter “sudo apt install mpd” to install mpd, the music server program.
 
-25.)	Enter “sudo apt install mpc” to install the mpd terminal client program
+25)	Enter “sudo apt install mpc” to install the mpd terminal client program.
 
-26.)	Enter “sudo nano /etc/mpd.conf”
+26)	Enter “sudo nano /etc/mpd.conf”.
 
-27.)	Make the file the same as the “mpd.conf” file in the "Configs" folder
+27)	Make the file the same as the “mpd.conf” file in the "Configs" folder.
 
-28.)	Save the file using “CTRL + O” then “Enter”
+28)	Save the file using “CTRL + O” then “Enter”.
 
-29.)	Enter “sudo reboot” to reboot the system
+29)	Enter “sudo reboot” to reboot the system.
 
 
 
-30.)	On your phone, install the app “MPDroid”, from the “FDroid app store” website
+30)	On your phone, install the app “MPDroid”, from the “FDroid app store” website.
 
-31.)	Check that you can connect to the mpd server on your raspberry pi
+31)	Check that you can connect to the mpd server on your raspberry pi.
 
 
 
-32.)	On the raspberry pi, open the terminal
+32)	On the raspberry pi, open the terminal.
 
-33.)	Enter “sudo apt install nginx” to install the web server for the remote power controls and album art
+33)	Enter “sudo apt install nginx” to install the web server for the remote power controls and album art.
 
-34.)	Enter “sudo nano /etc/nginx/nginx.conf” 
+34)	Enter “sudo nano /etc/nginx/nginx.conf”.
 
-35.)	Make the file the same as the “nginx.conf” file in the "Configs" folder
+35)	Make the file the same as the “nginx.conf” file in the "Configs" folder.
 
-36.)	Save the file using “CTRL + O” then “Enter”
+36)	Save the file using “CTRL + O” then “Enter”.
 
-37.)	Enter “sudo nano /etc/nginx/sites-available/default” 
+37)	Enter “sudo nano /etc/nginx/sites-available/default”.
 
-38.)	Make the file the same as the “default” file in the "Configs" folder
+38)	Make the file the same as the “default” file in the "Configs" folder.
 
-39.)	Save the file using “CTRL + O” then “Enter”
+39)	Save the file using “CTRL + O” then “Enter”.
 
-40.)	Enter “ln -s /media /var/www/html/media” to create a symbolic link between the hard drive and the web server
+40)	Enter “ln -s /media /var/www/html/media” to create a symbolic link between the hard drive and the web server.
 
-41.)	Enter “cd /var/www/html”
+41)	Enter “cd /var/www/html”.
 
-42.)	Make the folder the same as the “html” folder in the "Configs" folder
+42)	Make the folder the same as the “html” folder in the "Configs" folder.
 
-43.)	Enter “sudo chmod +x *.sh” to give all scripts in the folder permission to execute
+43)	Enter “sudo chmod +x *.sh” to give all scripts in the folder permission to execute.
 
 
 
-44.)	Enter “sudo apt install php7.0-fpm” to install the Fastpass CGI php server for running the poweroff and reboot scripts from the web server
+44)	Enter “sudo apt install php7.0-fpm” to install the Fastpass CGI php server for running the poweroff and reboot scripts from the web server.
 
-45.)	Enter “sudo nano /etc/php/7.0/fpm/pool.d/ww<i></i>w.conf”
+45)	Enter “sudo nano /etc/php/7.0/fpm/pool.d/ww<i></i>w.conf”.
 
-46.)	Make the file the same as the “ww<i></i>w.conf” file in the "Configs" folder
+46)	Make the file the same as the “ww<i></i>w.conf” file in the "Configs" folder.
 
-47.)	Save the file using “CTRL + O” then “Enter”
+47)	Save the file using “CTRL + O” then “Enter”.
 
-48.)	Enter “sudo reboot” to reboot the system
+48)	Enter “sudo reboot” to reboot the system.
 
 
 
-49.)	On your phone, type the ip-address of the pi into your web browser (it will usually be in the form 192.168.0.xx). Test the web interface to see if it works. 
+49)	On your phone, type the ip-address of the pi into your web browser (it will usually be in the form 192.168.0.xx). Test the web interface to see if it works. 
 
 
 
-50.)	On your phone, open MPDroid and connect to the pi
+50)	On your phone, open MPDroid and connect to the pi.
 
-51.)	Go into “Settings > Cover art settings > Download cover art” and turn it off
+51)	Go into “Settings > Cover art settings > Download cover art” and turn it off.
 
-52.)	Go into “Settings > Cover art settings > Clear cover art cache” and press it
+52)	Go into “Settings > Cover art settings > Clear cover art cache” and press it.
 
-53.)	Go into “Settings > Cover art settings > Download local cover art” and turn it on
+53)	Go into “Settings > Cover art settings > Download local cover art” and turn it on.
 
-54.)	Go into “Settings > Cover art settings > Path to music” and set it to “/media”
+54)	Go into “Settings > Cover art settings > Path to music” and set it to “/media”.
 
-55.)	Go into “Settings > Cover art settings > Cover filename” and set it to “Folder.jpg” (be careful as this is case sensitive)
+55)	Go into “Settings > Cover art settings > Cover filename” and set it to “Folder.jpg” (be careful as this is case sensitive).
 
-56.)	Go into “Settings > Cover art settings > Download cover art” and turn it off
+56)	Go into “Settings > Cover art settings > Download cover art” and turn it off.
 
-57.)	Go into “Settings > Library settings > Simple mode” and turn it on
+57)	Go into “Settings > Library settings > Simple mode” and turn it on.
 
-58.)	Go into “Settings > Library settings > Use Album Cache” and turn it on
+58)	Go into “Settings > Library settings > Use Album Cache” and turn it on.
 
-59.)	Go into “Settings > Library settings > Simple mode” and turn it on
+59)	Go into “Settings > Library settings > Simple mode” and turn it on.
 
-60.)	Go into “Settings > Interface settings > Now playing settings > Show audio properties” and turn it on
+60)	Go into “Settings > Interface settings > Now playing settings > Show audio properties” and turn it on.
 
-61.)	Go into “Settings > Interface settings > Use light theme” and turn it off
+61)	Go into “Settings > Interface settings > Use light theme” and turn it off.
 
-62.)	Go into “Settings > Server Information” and run “Refresh MPD’s database”. This will scan the hard drive for music files and can take a long time (5-10 minutes). You can check to see if it finished using the web interface we created, in the “MPD status” page. Once you no longer see “Updating DB (#1)” then the scan is finished.
+62)	Go into “Settings > Server Information” and run “Refresh MPD’s database”. This will scan the hard drive for music files and can take a long time (5-10 minutes). You can check to see if it finished using the web interface we created, in the “MPD status” page. Once you no longer see “Updating DB (#1)” then the scan is finished.
 
-63.)	Close the app fully and then open it again
+63)	Close the app fully and then open it again.
 
-64.)	The music centre is complete!
+64)	The music centre is complete!
